@@ -9,7 +9,6 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
     let service: ToDoService
-//    var todoItems: [(title: String, createdAt: Date)] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ extension ToDoListViewController {
         }
 
         let item = service.item(at: indexPath.row)
-        
+        cell.todo = item
         return cell
     }
 }
