@@ -19,6 +19,8 @@
 		A85194D0288ED91500CA2117 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85194CF288ED91500CA2117 /* ToDo.swift */; };
 		A85194D4288EECE600CA2117 /* Toggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85194D3288EECE600CA2117 /* Toggable.swift */; };
 		A85194D6288EECF100CA2117 /* ToDoServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85194D5288EECF100CA2117 /* ToDoServiceImpl.swift */; };
+		A85194D8288EFE2800CA2117 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85194D7288EFE2800CA2117 /* Repository.swift */; };
+		A85194DA288EFE9100CA2117 /* UserDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85194D9288EFE9100CA2117 /* UserDefaultRepository.swift */; };
 		BED21B64D8F18CE644C466A2 /* Pods_POP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2761146D4356F17DCE93FFD /* Pods_POP.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		A85194CF288ED91500CA2117 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		A85194D3288EECE600CA2117 /* Toggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggable.swift; sourceTree = "<group>"; };
 		A85194D5288EECF100CA2117 /* ToDoServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoServiceImpl.swift; sourceTree = "<group>"; };
+		A85194D7288EFE2800CA2117 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A85194D9288EFE9100CA2117 /* UserDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultRepository.swift; sourceTree = "<group>"; };
 		E2761146D4356F17DCE93FFD /* Pods_POP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A85194AE288ED4FA00CA2117 /* POP */,
+				A85194D9288EFE9100CA2117 /* UserDefaultRepository.swift */,
 				A85194AD288ED4FA00CA2117 /* Products */,
 				19E5E77099C89B088497E485 /* Pods */,
 				99CCF24DF5A31543DBDC055F /* Frameworks */,
@@ -137,6 +142,7 @@
 				A85194CF288ED91500CA2117 /* ToDo.swift */,
 				A85194D3288EECE600CA2117 /* Toggable.swift */,
 				A85194D5288EECF100CA2117 /* ToDoServiceImpl.swift */,
+				A85194D7288EFE2800CA2117 /* Repository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -263,8 +269,10 @@
 				A85194CD288ED7EA00CA2117 /* ToDoService.swift in Sources */,
 				A85194B2288ED4FA00CA2117 /* SceneDelegate.swift in Sources */,
 				A85194D4288EECE600CA2117 /* Toggable.swift in Sources */,
+				A85194D8288EFE2800CA2117 /* Repository.swift in Sources */,
 				A85194CA288ED59F00CA2117 /* ToDoItemTableViewCell.swift in Sources */,
 				A85194D6288EECF100CA2117 /* ToDoServiceImpl.swift in Sources */,
+				A85194DA288EFE9100CA2117 /* UserDefaultRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class ToDoItemTableViewCell: UITableViewCell {
     
     weak var toggable: Toggable?
     
-    @IBAction func onToggle(_ sender: Any) {
+    @IBAction func onToggle(_ sender: UISwitch) {
         toggable?.toggle(withId: todo.id)
     }
     
@@ -30,7 +30,6 @@ class ToDoItemTableViewCell: UITableViewCell {
             itemTitle.text = newValue.title
             isDone.isOn = newValue.done
             updatedAt.text = formatter.string(from: newValue.createdAt)
-            self.todo = newValue
         }
     }
 }

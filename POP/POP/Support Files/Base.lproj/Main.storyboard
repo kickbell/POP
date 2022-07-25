@@ -57,18 +57,21 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a4l-JQ-MWo">
                                                     <rect key="frame" x="0.0" y="11" width="51" height="31"/>
                                                     <color key="onTintColor" systemColor="systemOrangeColor"/>
+                                                    <connections>
+                                                        <action selector="onToggle:" destination="Xdn-3r-3JR" eventType="valueChanged" id="K33-zY-gs2"/>
+                                                    </connections>
                                                 </switch>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="By6-Aj-rXF">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="By6-Aj-rXF">
                                                     <rect key="frame" x="69" y="5.5" width="305" height="42.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLC-SY-wgt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="305" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="yyyy. MM. dd HH:mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLK-XK-eU5">
-                                                            <rect key="frame" x="0.0" y="28" width="136.5" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="28" width="305" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
@@ -86,15 +89,15 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="isDone" destination="a4l-JQ-MWo" id="hRB-0m-Q40"/>
-                                    <outlet property="itemTitle" destination="gLC-SY-wgt" id="e4q-FN-rOW"/>
-                                    <outlet property="updatedAt" destination="QLK-XK-eU5" id="XaB-wz-vvt"/>
+                                    <outlet property="isDone" destination="a4l-JQ-MWo" id="daI-kw-ZB0"/>
+                                    <outlet property="itemTitle" destination="gLC-SY-wgt" id="1SZ-LC-RWP"/>
+                                    <outlet property="updatedAt" destination="QLK-XK-eU5" id="YnN-Rc-6y8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="r1C-Oq-aPa" id="9qy-X3-pzq"/>
-                            <outlet property="delegate" destination="r1C-Oq-aPa" id="FmS-Bt-TFV"/>
+                            <outlet property="dataSource" destination="r1C-Oq-aPa" id="Veb-i0-KHe"/>
+                            <outlet property="delegate" destination="r1C-Oq-aPa" id="ECv-7C-wLZ"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="The To-Do" id="ujh-jp-Uhc">
@@ -128,7 +131,7 @@
                                 <rect key="frame" x="335.5" y="83" width="58.5" height="31"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
-                                    <action selector="onDone" destination="2yT-xd-Jou" eventType="touchUpInside" id="FPc-aH-ADl"/>
+                                    <action selector="onDone" destination="2yT-xd-Jou" eventType="touchUpInside" id="Yrq-PJ-AbD"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20m-z4-RFr">
@@ -157,6 +160,7 @@
                         <constraints>
                             <constraint firstItem="20m-z4-RFr" firstAttribute="top" secondItem="Hij-fg-kZc" secondAttribute="bottom" constant="32" id="4Tc-mo-EBB"/>
                             <constraint firstItem="20m-z4-RFr" firstAttribute="leading" secondItem="MmK-PS-YrX" secondAttribute="leading" constant="20" id="Fjv-2w-HVB"/>
+                            <constraint firstItem="8J1-dT-AXj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hij-fg-kZc" secondAttribute="trailing" constant="8" symbolic="YES" id="Usi-Lp-rXc"/>
                             <constraint firstItem="Hij-fg-kZc" firstAttribute="leading" secondItem="MmK-PS-YrX" secondAttribute="leading" constant="20" id="Xfc-2j-SFw"/>
                             <constraint firstItem="MmK-PS-YrX" firstAttribute="trailing" secondItem="8J1-dT-AXj" secondAttribute="trailing" constant="20" id="m1S-sp-84x"/>
                             <constraint firstItem="MmK-PS-YrX" firstAttribute="trailing" secondItem="20m-z4-RFr" secondAttribute="trailing" constant="20" id="q3v-DN-n9R"/>
@@ -165,7 +169,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="itemTitle" destination="20m-z4-RFr" id="1cM-JH-cQ9"/>
+                        <outlet property="itemTitle" destination="20m-z4-RFr" id="POl-sr-Rln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMK-HE-YVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

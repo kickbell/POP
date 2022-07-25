@@ -7,14 +7,26 @@
 import Foundation
 
 class ToDoServiceImpl: ToDoService {
+    private let repository: Repository
+    
+    init(repository: Repository) {
+        self.repository = repository
+        todoItems = repository.load()
+    }
+    
+    private func save() {
+        repository.save(todos: todoItems)
+    }
+    
     private var todoItems: [ToDo] = []
-
+ 
     func create(title: String) {
         let todo = ToDo(id: UUID().uuidString,
                         title: title,
                         done: false,
                         createdAt: Date())
         todoItems.append(todo)
+        save()
     }
     
     func count() -> Int {
@@ -33,6 +45,7 @@ extension ToDoServiceImpl: Toggable {
             var todo = found.element
             todo.done = !todo.done
             todoItems[index] = todo
+            save()
         }
     }
 }
