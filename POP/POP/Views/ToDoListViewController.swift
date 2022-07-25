@@ -8,7 +8,7 @@
 import UIKit
 
 class ToDoListViewController: UITableViewController {
-    let service: ToDoService = ToDoServiceImpl(repository: UserDefaultRepository())
+    let service = Inject(ToDoService.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()

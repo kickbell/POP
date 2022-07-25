@@ -5,13 +5,20 @@
 //  Created by jc.kim on 7/25/22.
 //
 
+import Swinject
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        container.register(Repository.self) { _ in UserDefaultRepository() }
+        container.register(ToDoService.self) { c in
+            let repository = c.resolve(Repository.self)!
+            return ToDoServiceImpl.init(repository: repository)
+        }
         return true
     }
 
@@ -23,3 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+func Inject<Service>(_ serviceType: Service.Type) -> Service? {
+    (UIApplication.shared.delegate as? AppDelegate)?.container.resolve(serviceType)
+}
