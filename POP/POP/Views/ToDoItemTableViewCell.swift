@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol Toggable: AnyObject {
-    func toggle(withId id: String)
-}
 
 class ToDoItemTableViewCell: UITableViewCell {
     @IBOutlet var isDone: UISwitch!
