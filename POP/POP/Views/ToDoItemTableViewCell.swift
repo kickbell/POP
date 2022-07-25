@@ -7,13 +7,19 @@
 
 import UIKit
 
+protocol Toggable: AnyObject {
+    func toggle(withId id: String)
+}
+
 class ToDoItemTableViewCell: UITableViewCell {
     @IBOutlet var isDone: UISwitch!
     @IBOutlet var itemTitle: UILabel!
     @IBOutlet var updatedAt: UILabel!
     
+    weak var toggable: Toggable?
+    
     @IBAction func onToggle(_ sender: Any) {
-        
+        toggable?.toggle(withId: todo.id)
     }
     
     var todo: ToDo {
